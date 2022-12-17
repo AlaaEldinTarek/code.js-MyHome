@@ -5,6 +5,7 @@ import millify from "millify";
 
 import { fetchApi, baseUrl } from "../../utils/fetchApi";
 import ImageScrollbar from "../../components/ImageScrollbar";
+import Image from "next/image";
 
 const PropertyDetails = ({
   PropertyDetails: {
@@ -40,7 +41,7 @@ const PropertyDetails = ({
               </div>
             </div>
             <div>
-              <img
+              <Image
                 src={agency?.logo?.url}
                 className="flex h-[30px] sm:h-[50px] "
               />
@@ -83,7 +84,12 @@ const PropertyDetails = ({
             <div className="flex flex-wrap ">
               {amenities.map((item) =>
                 item.amenities.map((amenity) => (
-                  <p key={amenity.text} className="font-bold text-blue-400 text-l m-1 border px-2 py-1 rounded border-blue-400">{amenity.text}</p>
+                  <p
+                    key={amenity.text}
+                    className="font-bold text-blue-400 text-l m-1 border px-2 py-1 rounded border-blue-400"
+                  >
+                    {amenity.text}
+                  </p>
                 ))
               )}
             </div>
