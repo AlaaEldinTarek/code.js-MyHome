@@ -45,6 +45,8 @@ const Property = ({
           </div>
           <div>
             <Image
+              width={100}
+              height={100}
               alt=""
               src={agency?.logo?.url}
               className="flex h-[30px] sm:h-[50px] "

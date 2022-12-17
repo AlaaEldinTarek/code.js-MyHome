@@ -44,6 +44,8 @@ const PropertyDetails = ({
               <Image
                 alt=""
                 src={agency?.logo?.url}
+                width={100}
+                height={100}
                 className="flex h-[30px] sm:h-[50px] "
               />
             </div>

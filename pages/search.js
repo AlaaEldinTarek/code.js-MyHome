@@ -33,7 +33,7 @@ const search = ({ properties }) => {
         </div>
         {properties.length === 0 && (
           <div className="flex flex-col justify-center items-center text-center mt-5 mb-5">
-            <Image alt="no result" src={noresult} />
+            <Image alt="no result" width={1000} src={noresult} />
             <div className=" text-2xl mt-3 ">No Result Found</div>
           </div>
         )}
