@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { FcFilledFilter } from "react-icons/fc";
@@ -8,9 +8,9 @@ import Property from "../components/Property";
 import noresult from "../assets/images/noresult.svg";
 import { fetchApi, baseUrl } from "../utils/fetchApi";
 
-const search = ({ properties }) => {
+const Search = ({ properties }) => {
   const [searchFilters, setSearchFilters] = useState(false);
-  const router = useRouter();
+  const Router = useRouter();
 
   return (
     <div className="px-4  text-white">
@@ -24,7 +24,7 @@ const search = ({ properties }) => {
       <div className=" m-0 mb-10  py-3 shadow-[-3px_-3px_10px_rgb(96_165_250_/_50),3px_3px_10px_rgb(96_165_250_/_50)]  shadow-blue-400 rounded-lg border-1">
         {searchFilters && <SearchFilters />}
         <div className="text-2xl p-4 font-bold ml-3  text-blue-400">
-          Properties {router.query.purpose}
+          Properties {Router.query.purpose}
         </div>
         <div className="flex justify-center items-center flex-wrap">
           {properties.map((property) => (
@@ -42,7 +42,7 @@ const search = ({ properties }) => {
   );
 };
 
-export default search;
+export default Search;
 
 export async function getServerSideProps({ query }) {
   const purpose = query.purpose || "for-rent";
