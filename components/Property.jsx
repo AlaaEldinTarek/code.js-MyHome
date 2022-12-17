@@ -44,7 +44,7 @@ const Property = ({
             </div>
           </div>
           <div>
-            <img
+            <Image
               src={agency?.logo?.url}
               className="flex h-[30px] sm:h-[50px] "
             />
