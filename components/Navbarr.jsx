@@ -48,7 +48,7 @@ export default function Nanbarr() {
                     </ActiveLink>
                   </li>
                   <li className="text-blue-400  ">
-                    <ActiveLink href="/Search" passHref>
+                    <ActiveLink href="/search" passHref>
                       <FcSearch />
                       Search
                     </ActiveLink>
