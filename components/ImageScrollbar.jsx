@@ -8,13 +8,12 @@ const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
   return (
-    <div className="flex justify-center items-center  ">
+    <div className="flex justify-center items-center w-[px] ">
       <Icon
         as={FcPrevious}
         onClick={() => scrollPrev()}
-        fontSize="30px"
         cursor="pointer"
-        className=" m-2 shadow rounded-full p-1 bg-white "
+        className=" m-2 shadow rounded-full p-1 bg-white text-[15px] sm:text-[30px]"
       />
     </div>
   );
@@ -28,9 +27,8 @@ const RightArrow = () => {
       <Icon
         as={FcNext}
         onClick={() => scrollNext()}
-        fontSize="30px"
         cursor="pointer"
-        className=" m-2 shadow rounded-full p-1 bg-white "
+        className=" m-2 shadow rounded-full p-1 bg-white text-[15px] sm:text-[30px]  "
       />
     </div>
   );
@@ -41,12 +39,14 @@ const ImageScrollbar = ({ data }) => (
     LeftArrow={LeftArrow}
     RightArrow={RightArrow}
     style={{ overflow: "hidden" }}
+    
+    className="flex flex-wrap "
   >
     {data.map((item) => (
       <div
         key={item.id}
         itemId={item.id}
-        className="overflow-hidden p-1 w-[900px]"
+        className=" overflow-hidden p-1 sm:w-[900px] w-[230px] "
       >
         <Image
           alt="property"
@@ -55,7 +55,7 @@ const ImageScrollbar = ({ data }) => (
           src={item.url}
           width={1000}
           height={500}
-          sizes="(max-width:500px) 100px, (max-width:1023px) 400px, 1000px"
+          sizes="(max-width:500px) 200px, (max-width:1023px) 400px, 1000px"
         />
       </div>
     ))}

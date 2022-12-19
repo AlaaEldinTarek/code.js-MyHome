@@ -25,11 +25,11 @@ const PropertyDetails = ({
     photos,
   },
 }) => (
-  <div className="px-4 py-2">
-    <div className=" flex flex-wrap justify-center   items-center my-4 mb-5  p-4  shadow-[-3px_-3px_10px_rgb(96_165_250_/_50),3px_3px_10px_rgb(96_165_250_/_50)]  shadow-blue-400 rounded-lg border-1">
-      <div className="max-w-[1000px] m-auto p-4 shadow  bg-white bg-opacity-10 rounded-lg ">
-        {photos && <ImageScrollbar data={photos} />}
-        <div className="p-6 mx-6">
+  <div className="  px-4 py-2">
+    <div className="   flex-wrap justify-center   items-center my-4 mb-5  p-4  shadow-[-3px_-3px_10px_rgb(96_165_250_/_50),3px_3px_10px_rgb(96_165_250_/_50)]  shadow-blue-400 rounded-lg border-1">
+      <div className=" max-w-[1000px] m-auto p-4 shadow  bg-white bg-opacity-10 rounded-lg ">
+        {photos && <ImageScrollbar className="flex" data={photos} />}
+        <div className=" sm:p-6 sm:mx-6">
           <div className=" flex pt-2 text-[] justify-between">
             <div className="flex items-center ">
               <div className=" pr-3 text-green-400">
@@ -55,24 +55,24 @@ const PropertyDetails = ({
               {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{" "}
               <BsGridFill />
             </div>
-            <div className=" text-2xl font-bold sm:text-lg text-yellow-100">
+            <div className=" text-lg font-bold  sm:text-2xl text-yellow-100">
               {title}
             </div>
           </div>
-          <div className="py-2 flex items-center text-yellow-50">
+          <div className="py-2 flex text-xs sm:text-lg items-center text-yellow-50">
             {description}
           </div>
-          <div className=" flex flex-wrap uppercase justify-between">
-            <div className="flex justify-between w-[400px] border-b-[1px] border-yellow-100 p-3">
+          <div className=" flex flex-wrap uppercase justify-between  ">
+            <div className="flex justify-between sm:w-[400px] w-[300px] border-b-[1px] border-yellow-100 p-3">
               <p className=" text-yellow-100">Type</p>
               <p className="font-bold  text-yellow-100">{type}</p>
             </div>
-            <div className="flex justify-between w-[400px] border-b-[1px] border-yellow-100 p-3">
+            <div className="flex justify-between sm:w-[400px] w-[300px] border-b-[1px] border-yellow-100 p-3">
               <p className=" text-yellow-100">Purpose</p>
               <p className="font-bold  text-yellow-100">{purpose}</p>
             </div>
             {furnishingStatus && (
-              <div className="flex justify-between w-[400px] border-b-[1px] border-yellow-100 p-3">
+              <div className="flex flex-wrap justify-between sm:w-[400px] w-[300px] border-b-[1px] border-yellow-100 p-3">
                 <p className=" text-yellow-100">Furnishing Status</p>
                 <p className="font-bold  text-yellow-100">{furnishingStatus}</p>
               </div>
@@ -80,7 +80,7 @@ const PropertyDetails = ({
           </div>
           <div>
             {amenities.length && (
-              <p className="font-bold text-2xl text-yellow-100 mt-5 ">
+              <p className="font-bold sm:text-2xl text-lg text-yellow-100 mt-5 ">
                 Amenities
               </p>
             )}
@@ -89,7 +89,7 @@ const PropertyDetails = ({
                 item.amenities.map((amenity) => (
                   <p
                     key={amenity.text}
-                    className="font-bold text-blue-400 text-l m-1 border px-2 py-1 rounded border-blue-400"
+                    className="font-bold text-blue-400 sm-text-l text-xs m-1 border px-2 py-1 rounded border-blue-400"
                   >
                     {amenity.text}
                   </p>
