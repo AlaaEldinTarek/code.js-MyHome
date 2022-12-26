@@ -39,14 +39,13 @@ const ImageScrollbar = ({ data }) => (
     LeftArrow={LeftArrow}
     RightArrow={RightArrow}
     style={{ overflow: "hidden" }}
-    
-    className="flex flex-wrap "
+    className=""
   >
     {data.map((item) => (
       <div
         key={item.id}
         itemId={item.id}
-        className=" overflow-hidden p-1 sm:w-[900px] w-[230px] "
+        className=" overflow-hidden p-1 sm:w-[900px] w-[230px] h-[250px] sm:h-[650px]   "
       >
         <Image
           alt="property"
@@ -55,7 +54,8 @@ const ImageScrollbar = ({ data }) => (
           src={item.url}
           width={1000}
           height={500}
-          sizes="(max-width:500px) 200px, (max-width:1023px) 400px, 1000px"
+          sizes="(max-width:500px) 200px, (max-width:1023px) 400px, 1000px "
+          className="h-[250px] sm:h-[650px] "
         />
       </div>
     ))}

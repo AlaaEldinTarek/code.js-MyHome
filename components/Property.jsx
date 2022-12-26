@@ -23,8 +23,8 @@ const Property = ({
 }) => {
   return (
     <Link href={`/property/${externalID}`} passHref>
-      <div className=" flex-warp w-[210px] h-[250px] sm:w-[350px] sm:h-[330px]  m-2  p-4 cursor-pointer  shadow-lg bg-white bg-opacity-10  rounded-lg  drop-shadow">
-        <div className="flex pr-3 w-[190px] h-[110px] sm:w-[330px] sm:h-[180px]">
+      <div className=" flex-warp  sm:w-[350px] sm:h-[330px]  m-2  p-4 cursor-pointer  shadow-lg bg-white bg-opacity-10  rounded-lg  drop-shadow">
+        <div className="flex pr-3  sm:w-[330px] sm:h-[180px]">
           <Image
             src={coverPhoto ? coverPhoto.url : DefaultImage}
             width={400}
